@@ -13,23 +13,23 @@ let noonTime    = 'Afternoon';
 let eveTime     = 'Evening';
 let nightTime   = "Night";
 let starStr     = 'Good';
-let myString    = "Hello"+" "+ myName +" "+ sirName;
+let myString    = `Hello  ${myName} ${sirName}`;
 let curTime     =  new Date().getHours(); 
 
 let specialString = '';
 let finalImage    = '';
 
 if(curTime>=4 && curTime<=11){
-  specialString = starStr +" " + morningtime;
+  specialString = `${starStr} ${morningtime}`;
   finalImage = mngImage;
 } else if(curTime>=12 && curTime<=16){
-  specialString = starStr +" " + noonTime;
+  specialString = `${starStr}  ${noonTime}`;
   finalImage = noonImage;
 } else if(curTime>=17 && curTime<=20){
-  specialString = starStr +" " + eveTime;
+  specialString = `${starStr}  ${eveTime}`;
   finalImage = eveningImage;
 } else if(curTime>=21 && curTime<=3){
-  specialString = starStr +" " + nightTime;
+  specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
 }
 
