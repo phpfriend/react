@@ -28,7 +28,10 @@ if(curTime>=4 && curTime<=11){
 } else if(curTime>=17 && curTime<=20){
   specialString = `${starStr}  ${eveTime}`;
   finalImage = eveningImage;
-} else if(curTime>=21 && curTime<=3){
+} else if(curTime>=21){
+  specialString = `${starStr} ${nightTime}`;
+  finalImage = nightImage;
+} else if(curTime<=3){
   specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
 }
