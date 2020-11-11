@@ -22,12 +22,12 @@ switch(res[1]){
     }
     break;
   case 'PM': 
-  if(res[0]>= 8){
-     specialString = starStr +" " +nightTime;
-  } else if(res[0]>= 12 || res[0]<= 4){
+  if(res[0]>= 12 || res[0]<= 4){
     specialString = starStr +" " +noonTime;
   } else if(res[0]>= 5 || res[0]<= 8){
     specialString = starStr +" " +eveTime;
+  } else if(res[0]>= 8){
+    specialString = starStr +" " +nightTime;
   }
   break; 
   default:
