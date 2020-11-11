@@ -5,19 +5,19 @@ import noonImage from "./images/afternoon.png";
 import eveningImage from "./images/evening.jpg";
 import mngImage from "./images/morning.jpg";
 
-let myName = 'Yogesh';
+let myName  = 'Yogesh';
 let sirName = 'Tiwari';
-let nightTime = "Night";
-let noonTime = 'Afternoon';
+
 let morningtime = 'Morning';
-let eveTime = 'Evening';
-let starStr = 'Good';
-let myString = "Hello"+" "+ myName +" "+ sirName;
-let curTime =  new Date().getHours(); 
+let noonTime    = 'Afternoon';
+let eveTime     = 'Evening';
+let nightTime   = "Night";
+let starStr     = 'Good';
+let myString    = "Hello"+" "+ myName +" "+ sirName;
+let curTime     =  new Date().getHours(); 
 
 let specialString = '';
-let finalImage = '';
-
+let finalImage    = '';
 
 if(curTime>=4 && curTime<=11){
   specialString = starStr +" " + morningtime;
@@ -32,31 +32,17 @@ if(curTime>=4 && curTime<=11){
   specialString = starStr +" " + nightTime;
   finalImage = nightImage;
 }
+
+
 ReactDOM.render(
   <>
-  <div style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  }}>
-  <h1>{myString }</h1>
-  </div>
-  <div style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  }}>
-  <h2>{specialString}</h2> 
-  </div>
-  
-  <div style={{
-    backgroundImage: `url(${finalImage})`,
-    backgroundSize: "cover",
-    height: "100vh",
-    color: "#f5f5f5"
-  }}>
-  
-  </div>  
+    <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
+      <h1>{myString }</h1>
+    </div>
+    <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
+    <h2>{specialString}</h2> 
+    </div>  
+    <div style={{ backgroundImage: `url(${finalImage})`,backgroundSize: "cover",height: "100vh",color: "#f5f5f5"}}></div>  
   </>,
   document.querySelector("#root")
 );
