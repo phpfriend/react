@@ -19,33 +19,41 @@ let curTime     =  new Date().getHours();
 let specialString = '';
 let finalImage    = '';
 
+let styleColor= 'black';
+
 if(curTime>=4 && curTime<=11){
   specialString = `${starStr} ${morningtime}`;
   finalImage = mngImage;
 } else if(curTime>=12 && curTime<=16){
   specialString = `${starStr}  ${noonTime}`;
+  styleColor= 'white';
   finalImage = noonImage;
 } else if(curTime>=17 && curTime<=20){
   specialString = `${starStr}  ${eveTime}`;
   finalImage = eveningImage;
+  styleColor= 'white'
 } else if(curTime>=21){
   specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
+  styleColor= 'red';
 } else if(curTime<=3){
   specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
+  styleColor= 'red';
 }
 
 
 ReactDOM.render(
   <>
-    <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-      <h1>{myString }</h1>
-    </div>
-    <div style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-    <h2>{specialString}</h2> 
+   
+    <div style={{ backgroundImage: `url(${finalImage})`,backgroundSize: "cover",height: "100vh"}}>
+      <div style={{display: "flex",justifyContent: "center",alignItems: "center", color:styleColor}}>
+        <h1>{myString }</h1>
+      </div>
+      <div style={{display: "flex",justifyContent: "center",alignItems: "center", color:styleColor}}>
+        <h2>{specialString}</h2> 
+      </div>  
     </div>  
-    <div style={{ backgroundImage: `url(${finalImage})`,backgroundSize: "cover",height: "100vh",color: "#f5f5f5"}}></div>  
   </>,
   document.querySelector("#root")
 );
