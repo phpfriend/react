@@ -24,6 +24,7 @@ let styleColor= 'black';
 if(curTime>=4 && curTime<=11){
   specialString = `${starStr} ${morningtime}`;
   finalImage = mngImage;
+  styleColor = '#11D7E7';
 } else if(curTime>=12 && curTime<=16){
   specialString = `${starStr}  ${noonTime}`;
   styleColor= 'white';
@@ -35,7 +36,7 @@ if(curTime>=4 && curTime<=11){
 } else if(curTime>=21){
   specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
-  styleColor= 'red';
+  styleColor= 'white';
 } else if(curTime<=3){
   specialString = `${starStr} ${nightTime}`;
   finalImage = nightImage;
